@@ -33,6 +33,6 @@
 
         <!-- Camera calibration parameters -->
         <!--If the node should wait for a camera_info topic to take the camera calibration data-->
-       <param name="load_calibration_from_cam" type="bool" value="yes" />
+       <param name="load_calibration_from_cam" type="bool" value="true" />
   </node>
 </launch>

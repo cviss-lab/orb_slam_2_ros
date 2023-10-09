@@ -11,14 +11,14 @@ WORKDIR /home/ros/src
 # RUN git clone https://github.com/IntelRealSense/realsense-ros.git
 # RUN git clone https://github.com/appliedAI-Initiative/orb_slam_2_ros.git
 
-ARG REPO_URL=https://github.com/cviss-lab/orb_slam_2_ros.git -b noetic-dev
+ARG REPO_URL="https://github.com/cviss-lab/orb_slam_2_ros.git -b noetic-dev"
 
 RUN if [ -d .git ]; then \
     git pull; \
   else \
     git clone ${REPO_URL} .; \
   fi
-  
+
 # Set up Noetic keys
 RUN apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 
